@@ -1,81 +1,85 @@
-Game Idea (Summary):
-This is a number guessing game. First, you choose a difficulty level (Easy, Medium, Hard), then you try to guess a random number within a limited number of attempts. You also have a hint button and a restart button.
+Game Idea – What’s it all about?
+This is a simple and fun number guessing game. First, you pick a difficulty level: Easy, Medium, or Hard. Then the game secretly generates a random number based on the level you chose. Your goal is to guess that number within a limited number of attempts.
 
-App Structure:
-The project is split into multiple files:
+To help you, there's a Hint button that gives you clues about the number, and a Restart button in case you want to start over.
 
-build_layout.py: The main file that runs the app.
+How the App is Built
+The app is divided into multiple files, each handling a specific part of the program:
 
-menu_screen.py: Contains the level selection menu logic.
+build_layout.py – This is the main file that launches the app and manages the screens.
 
-number_guessing.py: Contains the game logic and result checking.
+menu_screen.py – This file contains the logic for the menu screen, including what happens when you select a difficulty level.
 
-menu.kv: The design of the menu screen.
+number_guessing.py – This file holds all the game logic: checking guesses, tracking attempts, giving hints, and ending the game.
 
-guess.kv: The design of the guessing game screen.
+menu.kv – This is the design layout for the menu screen.
 
-First Screen: Menu (menu.kv + menu_screen.py)
-It has 3 buttons:
+guess.kv – This is the design layout for the guessing screen where the game takes place.
+
+First Screen: Menu
+The menu screen lets you choose how hard the game should be. It includes three buttons:
+
 
 Button	What it does
-Easy	Sets the game to Easy level (number between 0 and 99).
-Medium	Sets the game to Medium level (number between 100 and 999).
-Hard	Sets the game to Hard level (number between 1000 and 9999).
+Easy	Sets the game to easy (number between 0–99).
+Medium	Sets the game to medium (100–999).
+Hard	Sets the game to hard (1000–9999).
 Example:
-If you click on "Medium":
+If you click on "Medium", the game will generate a random number like 527, then take you to the guessing screen so you can start playing.
 
-The game will generate a random number, e.g., 527.
+Second Screen: The Guessing Game
+This is where the actual game takes place. Here's what each part of the screen does:
 
-Then it switches to the game screen so you can start guessing.
-
-Second Screen: Game Screen (guess.kv + number_guessing.py)
-Buttons and Components:
 
 Component	Purpose
- guess_input	Input field where you type your guess (e.g., 345).
- submit_button	Button to check your guess.
- hint_button	Button to get a hint about the number.
- restart_button	Button to restart the game.
- result_label	Shows the result (if guess is high, low, or correct, and remaining attempts).
- hint_label	Shows the hints you've received.
- Example Gameplay:
-Scenario:
-You chose "Easy", and the random number is 23 (you don't know that).
 
-Step 1:
-You type 30 in the input field and click Submit.
+guess_input	A text field where you type your guess (e.g., 345).
+submit_button	A button to submit your guess and check if it’s correct.
+hint_button	A button that gives you a hint about the hidden number.
+restart_button	A button that takes you back to the main menu and resets the game.
+result_label	Displays feedback (too high, too low, correct, attempts left, etc.).
+hint_label	Shows any hints you’ve received so far.
+Example Gameplay
+Let’s say you chose "Easy", and the game secretly picked the number 23.
 
-The program shows:
+Step 1: You type 30 and press Submit.
+
+The game responds with:
 
 
 Not correct, try again!
 Attempts left: 3
 High number!
-Step 2:
-You click the Hint button.
+Step 2: You press the Hint button.
 
-It gives a hint like:
+It shows:
+
 
 Hint: Total sum of all digits in the number is: 5
-Step 3:
-You type 23 and press Submit.
+Step 3: You type 23 and press Submit again.
 
-You win, and the message shows:
-
+This time, you win! The message says:
 
 
-Congratulation! you win the game from your 2 attempts
- What happens if attempts are over?
-If you fail to guess the number after all allowed attempts (usually 4):
+Congratulation! You win the game from your 2 attempts.
+What Happens When You Run Out of Attempts?
+If you use up all your guesses (usually 4 tries) and still don’t get the number:
 
-The submit and hint buttons are disabled.
+The submit and hint buttons become disabled.
 
-A message is shown like:
+You’ll see a message like:
 
 
 You don't have any attempts left!
 Game over!
 The number is: 23
-Restart Button:
-If you click on it, it sends you back to the main menu so you can choose a new difficulty and start fresh.
+Restart Button
+If you want to play again, just click the Restart button. It sends you back to the menu so you can choose a difficulty level and start fresh.
+
+
+
+
+
+
+
 
