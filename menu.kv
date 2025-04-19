@@ -1,0 +1,46 @@
+            
+
+<MainMenuScreen>
+    name: "menu"
+
+    BoxLayout:
+
+        orientation: "vertical"
+        padding: 20
+        spacing: 15
+
+        Label:
+            id: welcome_text
+            text: "Welcome to Number Guessing game!\n\n\n\n\nChoose Difficulty:" 
+            font_size: 40
+            size_hint_y: 5
+            height: 40
+
+        Button:
+            id: easy_button
+            text: "Easy mode"
+            font_size: 40
+            size_hint_y: None
+            height: 50
+            on_press: root.level_easy()
+
+
+        Button:
+            id: medium_button
+            text: "Medium mode"
+            font_size: 40
+            size_hint_y: None
+            height: 50
+            on_press: root.level_medium()
+            
+
+        Button:
+            id: hard_button
+            text: "Hard mode"
+            font_size: 40
+            size_hint_y: None
+            height: 50
+            on_press: root.level_hard()
+
+
+        

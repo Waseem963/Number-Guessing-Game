@@ -1,0 +1,73 @@
+ScreenManager:
+    MainMenuScreen:
+    GuessGame:
+
+<GuessGame>:
+    name: "game"
+
+    BoxLayout:
+
+        orientation: "vertical"
+        padding: 20
+        spacing: 15
+
+        Label:
+            text: "Guess the number!" 
+            font_size: 40
+            size_hint_y: None
+            height: 40
+
+        TextInput:
+            id: guess_input
+            hint_text: "Enter guess"
+            input_filter: None
+            multiline: False
+            font_size: 22
+            size_hint_y: None
+            height: 50
+
+        
+        Button:
+            id: submit_button
+            text: "Submit"
+            font_size: 40
+            size_hint_y: None
+            height: 50
+            on_press: root.check_guess()
+
+        
+        
+        Button:
+            id: hint_button
+            text: "Hint"
+            font_size: 40
+            size_hint_y: None
+            height: 50
+            on_press: root.use_hints()
+
+        Button:
+            id: restart_button
+            text: "Restart"
+            font_size: 40
+            size_hint_y: None
+            height: 50
+            on_press: app.restart_game()
+            disabled: True
+
+
+
+        Label:
+            id: result_label
+            text: ""
+            font_size: 20
+            size_hint_y: None
+            height: 50
+
+
+        Label:
+            id: hint_label
+            text: ""
+            font_size: 20
+            size_hint_y: 5
+            height: 40
+
