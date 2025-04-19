@@ -47,9 +47,7 @@ You type 30 in the input field and click Submit.
 
 The program shows:
 
-typescript
-Copy
-Edit
+
 Not correct, try again!
 Attempts left: 3
 High number!
@@ -58,18 +56,14 @@ You click the Hint button.
 
 It gives a hint like:
 
-python
-Copy
-Edit
 Hint: Total sum of all digits in the number is: 5
 Step 3:
 You type 23 and press Submit.
 
 You win, and the message shows:
 
-csharp
-Copy
-Edit
+
+
 Congratulation! you win the game from your 2 attempts
  What happens if attempts are over?
 If you fail to guess the number after all allowed attempts (usually 4):
@@ -78,9 +72,7 @@ The submit and hint buttons are disabled.
 
 A message is shown like:
 
-vbnet
-Copy
-Edit
+
 You don't have any attempts left!
 Game over!
 The number is: 23
