@@ -1,14 +1,12 @@
 import random
-from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
-from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 #class that hold BoxLayout which means it behave now as BoxLayout but i add my own features to it 
 # (inheriting all the features of BoxLayout from Kivy) this is how class inhertince in python is class (parent)
 class GuessGame(Screen):
 
     # __init__ means this function is constructor, self means this object, **kwargs means key word arguments: accept any number of keyword arguments, and pack them into a dicitonary
+    # \**kwargs معناها المعاملات التي يتم تمريهيا بالاسم والنجمتين معناها خد كل المعاملات التي يتم تمريرها بالاسم وحطها في قاموس
+    # هي تعمل مثل ارراي تجمع المعلومات يلي ستضاف بالفانكشن لاحقا functon (**kwargs), function( bla = true, bla ="lol", bla = 2) **kwargs = {la = true, bla ="lol", bla = 2}
     #“This is my custom layout, but please Kivy — run your built-in layout setup too, and use all the options you might need.” that purpose of this functions.
     def __init__(self, **kwargs):
 
@@ -148,3 +146,20 @@ class GuessGame(Screen):
  
     
 
+
+
+
+   #Next: Check for better version of this code using AI, like ChatGPT
+   #Optinal: next project make the translator one using AI for videos
+   # for suggestions for this project: https://chatgpt.com/c/67fa613e-c854-8007-8317-b6b16516393b
+   
+
+
+   #my_kivy_game/
+#│
+#├── menu_screen.py           ← Contains the level menu buttons (Easy, Medium, Hard)
+#├── game_screen.py           ← Contains the guessing game logic
+#├── main.py                  ← Starts the app
+#├── menu.kv                  ← Design for the menu screen
+#├── game.kv                  ← Design for the game screen
+#└── assets/ (optional)       ← For sounds, images, etc.
