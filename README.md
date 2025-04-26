@@ -1,79 +1,96 @@
-🎮 Game Idea – What’s it all about?
-This is a simple and fun number guessing game. First, you pick a difficulty level: Easy, Medium, or Hard. Then the game secretly picks a random number based on the level you chose.
-Your goal is to guess that number within a limited number of attempts.
+Number Guessing Game
+A simple and fun number guessing game built with Python and Kivy.
 
-To help you out, there's a 💡 Hint button that gives you clues, and a 🔁 Restart button if you want to start over.
+Overview
+First, the player selects a difficulty level: Easy, Medium, or Hard.
+The game then secretly picks a random number based on the chosen difficulty.
+The player must guess the number within a limited number of attempts.
 
-🧱 How the App is Built
-The app is split into multiple files, each handling something specific:
+Players can request hints if they get stuck, or restart the game at any time.
 
-🧠 build_layout.py – The main file that runs the app and manages screen switching.
-
-🧩 menu_screen.py – Handles the logic for choosing difficulty.
-
-🧮 number_guessing.py – Contains the core game logic: checking guesses, hints, attempts, win/lose logic.
-
-🎨 menu.kv – The visual design for the menu screen.
-
-🎨 guess.kv – The visual design for the guessing screen where you play the game.
-
-🖥️ First Screen: Menu
-When the game starts, you’ll see a menu with 3 buttons:
+How the App is Structured
+The app is divided into multiple files for clean organization:
 
 
-🔘 Button	🧾 What it does
-🟢 Easy	Sets the game to easy mode (number 0–99).
-🟡 Medium	Sets the game to medium mode (number 100–999).
-🔴 Hard	Sets the game to hard mode (number 1000–9999).
-💡 Example:
-If you click Medium:
-
-The game randomly picks a number, let’s say 527.
-
-Then it takes you to the guessing screen so you can start playing.
-
-🎯 Second Screen: The Guessing Game
-This is where you play the actual game. Here's what each element on the screen does:
+File Name	Purpose
+build_layout.py	Main file that initializes the app and manages screen switching.
+menu_screen.py	Handles the logic for difficulty selection.
+number_guessing.py	Contains the core game logic: checking guesses, giving hints, tracking attempts, and handling win/lose conditions.
+menu.kv	Defines the visual design of the menu screen.
+guess.kv	Defines the visual design of the guessing screen.
+Gameplay
+First Screen: Menu
+When the app starts, the player is presented with a menu containing three difficulty options:
 
 
-🧩 Component	🛠️ Purpose
-✍️ guess_input	A text box where you type your guess (e.g., 345).
-✅ submit_button	Click to submit your guess and check if it’s right or wrong.
-💡 hint_button	Click to get a hint about the number.
-🔁 restart_button	Resets the game and takes you back to the menu.
-📢 result_label	Shows feedback like “too high,” “too low,” or “correct,” plus attempts.
-🧾 hint_label	Displays the hints you've received so far.
-🕹️ Example Gameplay
-Let’s say you picked Easy, and the secret number is 23.
+Difficulty	Range
+Easy	Number between 0 and 99
+Medium	Number between 100 and 999
+Hard	Number between 1000 and 9999
+After selecting a difficulty, the game picks a random number and moves to the guessing screen.
 
-Step 1: You type 30 and hit Submit.
-
-The game says:
-
-Not correct, try again!
-Attempts left: 3
-High number!
-Step 2: You click the Hint button.
-
-It gives you something like:
+Second Screen: Guessing Game
+On the guessing screen, players can:
 
 
-Hint: Total sum of all digits in the number is: 5
-Step 3: You try again with 23, and click Submit.
+Component	Description
+guess_input	Text box where the player types their guess.
+submit_button	Submit the guess and check if it's correct.
+hint_button	Request a clue about the number.
+restart_button	Restart the game and return to the menu.
+result_label	Displays feedback ("too high", "too low", "correct") and remaining attempts.
+hint_label	Shows the hints received so far.
+Example Gameplay
+The player chooses Medium difficulty.
 
-This time, you win!
+The game randomly selects the number 527.
 
-Congratulation! You win the game from your 2 attempts.
-🛑 What If You Run Out of Attempts?
-If you use all your guesses (usually 4) without guessing correctly:
+The player guesses 600 and clicks Submit.
+The game responds:
+"Not correct, try again! Attempts left: 3. High number!"
 
-The Submit and Hint buttons get disabled.
+The player clicks the Hint button.
+A hint appears: "The sum of all digits is 14."
 
-You’ll see a message like:
+The player guesses 527 and wins the game!
 
+Game Over
+If the player uses all available attempts without guessing correctly:
+
+The Submit and Hint buttons are disabled.
+
+A message appears saying:
+
+vbnet
+Copy
+Edit
 You don't have any attempts left!
 Game over!
-The number is: 23
-🔁 Restart Button
-Want to try again? Just click Restart, and the app will take you back to the menu screen. You can pick a new difficulty level and play a new round.
+The number was: [secret number].
+Restarting
+At any time, the player can click the Restart button to:
 
+Reset the game state.
+
+Return to the menu.
+
+Start a new round by selecting a difficulty again.
+
+Requirements
+Python 3.x
+
+Kivy
+
+Install Kivy using pip if you don't have it yet:
+
+bash
+Copy
+Edit
+pip install kivy
+How to Run the Game
+Simply run the build_layout.py file:
+
+bash
+Copy
+Edit
+python build_layout.py
