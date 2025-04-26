@@ -4,9 +4,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 # (inheriting all the features of BoxLayout from Kivy) this is how class inhertince in python is class (parent)
 class GuessGame(Screen):
 
-    # __init__ means this function is constructor, self means this object, **kwargs means key word arguments: accept any number of keyword arguments, and pack them into a dicitonary
-    # \**kwargs معناها المعاملات التي يتم تمريهيا بالاسم والنجمتين معناها خد كل المعاملات التي يتم تمريرها بالاسم وحطها في قاموس
-    # هي تعمل مثل ارراي تجمع المعلومات يلي ستضاف بالفانكشن لاحقا functon (**kwargs), function( bla = true, bla ="lol", bla = 2) **kwargs = {la = true, bla ="lol", bla = 2}
+    # __init__ means this function is constructor, self means this object, **kwargs means key word arguments: accept any number of keyword arguments, and pack them into a dicitonary 
     #“This is my custom layout, but please Kivy — run your built-in layout setup too, and use all the options you might need.” that purpose of this functions.
     def __init__(self, **kwargs):
 
