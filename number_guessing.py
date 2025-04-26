@@ -145,19 +145,3 @@ class GuessGame(Screen):
     
 
 
-
-
-   #Next: Check for better version of this code using AI, like ChatGPT
-   #Optinal: next project make the translator one using AI for videos
-   # for suggestions for this project: https://chatgpt.com/c/67fa613e-c854-8007-8317-b6b16516393b
-   
-
-
-   #my_kivy_game/
-#│
-#├── menu_screen.py           ← Contains the level menu buttons (Easy, Medium, Hard)
-#├── game_screen.py           ← Contains the guessing game logic
-#├── main.py                  ← Starts the app
-#├── menu.kv                  ← Design for the menu screen
-#├── game.kv                  ← Design for the game screen
-#└── assets/ (optional)       ← For sounds, images, etc.
